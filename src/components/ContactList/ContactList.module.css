@@ -1,17 +1,48 @@
 .listContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  overflow: auto;
+  padding: 20px;
+
 }
 
 .listDiv {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  list-style-type: none;
+  padding: 0;
 }
 
-.listContainer li {
+.listDiv li {
   display: flex;
-  flex-direction: row;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.listDiv li:last-child {
+  border-bottom: none;
+}
+
+button {
+  background-color: #057018;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1a5e26;
+}
+
+.contactName {
+  flex: 1; /* Face numele să ocupe spațiu maxim disponibil */
+}
+
+.contactNumber {
+  width: 120px; /* Lățime fixă pentru numărul de telefon */
+  text-align: right; /* Aliniere la dreapta pentru numărul de telefon */
+  padding-left: 20px; /* Adaugă un spațiu între nume și număr */
 }

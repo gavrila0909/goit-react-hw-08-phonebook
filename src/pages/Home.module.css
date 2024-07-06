@@ -1,13 +1,19 @@
 
     .container {
-      min-height: 'calc(100vh - 50px)';
-      display: 'flex';
-      align-items: 'center';
-      justify-content: 'center';
+      margin-top: 60px;
+      width: 55%;
+      margin-left: 20px;
+     
     }
     .title {
-      font-weight: 500;
-      font-size: 48;
-      text-align: 'center';
+      color: #295229;
+      font-size: 50px;
+    }
+    .container strong {
+      font-size: 28px;
+      color: #0f350f;
+    }
+    .container p {
+      font-size: 20px;
     }
   

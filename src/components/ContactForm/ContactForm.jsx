@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../../redux/contacts/selectors';
@@ -18,13 +17,16 @@ const ContactForm = () => {
     if (name.trim() === '' || number.trim() === '') {
       return;
     }
+
     const existingContact = contacts.find(contact => contact.name === name);
     if (existingContact) {
       Notiflix.Notify.failure(`${name} already exists in the list`);
       return;
     }
+
     dispatch(addContact(name, number));
     setFormData({ name: '', number: '' });
+    Notiflix.Notify.success('Contact added successfully');
   };
 
   const handleInputChange = event => {
@@ -34,7 +36,8 @@ const ContactForm = () => {
   };
 
   return (
-    <form className={styles.formContainer} onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
+     
       <label htmlFor="name">Name:</label>
       <input
         type="text"

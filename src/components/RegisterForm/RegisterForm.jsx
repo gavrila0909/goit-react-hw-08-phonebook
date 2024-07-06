@@ -1,41 +1,82 @@
-// src/components/RegisterForm.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { register } from '../../redux/auth/operations';
 import css from './RegisterForm.module.css';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
+  const [error, setError] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    dispatch(
-      register({
-        name: form.elements.name.value,
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-      })
-    );
+    const name = form.elements.name.value;
+    const email = form.elements.email.value;
+    const password = form.elements.password.value;
+
+    // Validare pentru câmpurile obligatorii
+    if (!name || !email || !password) {
+      setError('All fields are required.');
+      return;
+    }
+
+    // Validare pentru formatul corect al email-ului
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!isValidEmail) {
+      setError('The email is not valid.');
+      return;
+    }
+
+    // Validare pentru lungimea minimă a parolei
+    const isValidPassword = password.length >= 6;
+    if (!isValidPassword) {
+      setError('Password must be at least 6 characters long.');
+      return;
+    }
+
+    // Resetarea mesajului de eroare dacă nu există probleme
+    setError('');
+
+    console.log('Form values:', { name, email, password });
+
+    // Dispatch pentru înregistrarea utilizatorului
+    dispatch(register({ name, email, password }));
+
+    // Resetarea formularului după trimitere
     form.reset();
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-      <label className={css.label}>
-        Username
-        <input type="text" name="name" required />
-      </label>
-      <label className={css.label}>
-        Email
-        <input type="email" name="email" required />
-      </label>
-      <label className={css.label}>
-        Password
-        <input type="password" name="password" required />
-      </label>
-      <button type="submit">Register</button>
-    </form>
+    <>
+      <form className={css.form} onSubmit={handleSubmit}>
+        <label className={css.label}>
+          Username
+          <input type="text" name="name" required autoComplete="name" />
+        </label>
+        <label className={css.label}>
+          Email
+          <input type="email" name="email" required autoComplete="email" />
+        </label>
+        <label className={css.label}>
+          Password
+          <input
+            type="password"
+            name="password"
+            required
+            autoComplete="current-password"
+          />
+        </label>
+        <button type="submit">Register</button>
+        {error && <p className={css.error}>{error}</p>}
+        <p className={css.registerLink}>
+          Already have an account?{' '}
+          <Link to="/login" className={css.register}>
+            Log In
+          </Link>
+        </p>
+      </form>
+    </>
   );
 };
 

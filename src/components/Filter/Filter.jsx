@@ -13,14 +13,12 @@ const Filter = () => {
 
   return (
     <div className={styles.filterContainer}>
-      <h2>Contacts</h2>
-      <h4>Find contacts by name</h4>
       <input
         type="text"
         name="search"
         value={filter}
         onChange={handleAddFilter}
-        placeholder="Find contact..."
+        placeholder="Find contact by name..."
       />
     </div>
   );

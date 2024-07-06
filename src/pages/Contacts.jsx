@@ -22,19 +22,18 @@ const Contacts = () => {
 
   return (
     <div className={styles.mainContainer}>
-      <h2>Phonebook</h2>
       <ContactForm />
       {isLoading && !error ? (
         <b>Request in progress...</b>
       ) : (
         <>
           {contacts.length > 0 ? (
-            <>
+            <div className={styles.contactsListContainer}>
               <Filter />
               <ContactList />
-            </>
+            </div>
           ) : (
-            <h3>No contacts yet</h3>
+            <h1 className={styles.title}>Add your first contact</h1>
           )}
         </>
       )}
