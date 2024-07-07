@@ -39,6 +39,7 @@ const LoginForm = () => {
             required
             autoComplete="email"
             autoFocus
+            id="email"
           />
         </label>
         <label>
@@ -48,6 +49,7 @@ const LoginForm = () => {
             name="password"
             autoComplete="current-password"
             required
+            id="password"
           />
         </label>
         <button type="submit">Log In</button>

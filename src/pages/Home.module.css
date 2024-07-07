@@ -40,6 +40,7 @@ strong {
 .getStarted {
   font-size: 1.5rem;
   color: #0f350f;
+  margin: 0px;
 }
 
 @media screen and (min-width: 768px) {

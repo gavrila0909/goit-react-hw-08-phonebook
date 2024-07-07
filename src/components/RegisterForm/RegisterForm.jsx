@@ -46,11 +46,11 @@ const RegisterForm = () => {
       <form className={css.form} onSubmit={handleSubmit}>
         <label className={css.label}>
           Username
-          <input type="text" name="name" required autoComplete="name" />
+          <input type="text" name="name" required autoComplete="name" id="username" autoFocus />
         </label>
         <label className={css.label}>
           Email
-          <input type="email" name="email" required autoComplete="email" />
+          <input type="email" name="email" required autoComplete="email" id="email" />
         </label>
         <label className={css.label}>
           Password
@@ -59,6 +59,7 @@ const RegisterForm = () => {
             name="password"
             required
             autoComplete="current-password"
+            id="password"
           />
         </label>
         <button type="submit">Register</button>
