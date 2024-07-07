@@ -4,7 +4,7 @@ import UserMenu from '../UserMenu/UserMenu';
 import AuthNav from '../AuthNav/AuthNav';
 import Modal from '../Modal/Modal';
 import { useAuth } from 'hooks';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { openModal } from '../../redux/modal/modalSlice';
 import iconMenu from '../../svg/svg.svg';
 import css from './AppBar.module.css';
