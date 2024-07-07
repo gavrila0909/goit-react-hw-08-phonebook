@@ -12,7 +12,6 @@ import css from './AppBar.module.css';
 const AppBar = () => {
   const { isLoggedIn } = useAuth();
   const dispatch = useDispatch();
-  const isOpen = useSelector(state => state.modal.isOpen);
 
   const handleOpenModal = () => {
     dispatch(openModal());
