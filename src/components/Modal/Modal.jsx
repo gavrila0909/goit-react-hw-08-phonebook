@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Navigation from '../../components/Navigation/Navigation';
-import UserMenu from '../UserMenu/UserMenu';
 import AuthNav from '../AuthNav/AuthNav';
 import { useAuth } from 'hooks';
 import { closeModal } from '../../redux/modal/modalSlice';
