@@ -1,16 +1,19 @@
-.wrapper {
+.userMenuWrapper {
   display: flex;
+  position: absolute;
   align-items: center;
-  gap: 12px;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  gap: 10px;
 }
 
 .username {
-  font-weight: 700;
-  font-size: 22px;
+  font-weight: 600;
+  font-size: 16px;
   color: #000000;
 }
-.wrapper button {
-  font-size: 18px;
+.logoutBtn {
   color: black;
   background: transparent;
   border: 1px solid black;
@@ -18,10 +21,33 @@
   padding: 8px 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 60px;
+  height: 30px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.wrapper button:hover {
+.logoutBtn:hover {
   color: white;
   border: none;
   background-color: #057018;
   transform: scale(1.05);
+}
+
+@media screen and (min-width: 768px) {
+  .userMenuWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logoutBtn {
+    font-size: 18px;
+    width: auto;
+    height: auto;
+  }
+  .username {
+    font-weight: 700;
+    font-size: 22px;
+  }
 }

@@ -1,5 +1,4 @@
 .navigation,
-.userMenu,
 .authNav {
   display: none;
 }
@@ -29,7 +28,6 @@
     display: none;
   }
   .navigation,
-  .userMenu,
   .authNav {
     display: block;
   }

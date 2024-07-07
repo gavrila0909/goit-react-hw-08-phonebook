@@ -27,7 +27,7 @@ const Modal = () => {
           X
         </button>
         <Navigation />
-        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+        {isLoggedIn || <AuthNav />}
       </div>
     </div>
   );

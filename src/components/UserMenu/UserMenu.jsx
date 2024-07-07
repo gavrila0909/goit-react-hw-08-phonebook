@@ -8,9 +8,9 @@ const UserMenu = () => {
   const { user } = useAuth();
 
   return (
-    <nav className={css.wrapper}>
+    <nav className={css.userMenuWrapper}>
       <p className={css.username}>Welcome, {user.name}</p>
-      <button type="button" onClick={() => dispatch(logOut())}>
+      <button className={css.logoutBtn} type="button" onClick={() => dispatch(logOut())}>
         Logout
       </button>
     </nav>
