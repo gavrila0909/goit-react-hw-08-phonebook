@@ -8,7 +8,7 @@ const RegisterForm = () => {
   const dispatch = useDispatch();
   const [error, setError] = useState('');
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.currentTarget;
     const name = form.elements.name.value;
@@ -26,19 +26,39 @@ const RegisterForm = () => {
       return;
     }
 
-    const isValidPassword = password.length >= 6;
-    if (!isValidPassword) {
+    const passwordCriteria = {
+      length: /.{6,}/,
+      uppercase: /[A-Z]/,
+      digit: /\d/,
+      specialChar: /[!@#$%^&*(),.?":{}|<>]/
+    };
+
+    if (!passwordCriteria.length.test(password)) {
       setError('Password must be at least 6 characters long.');
+      return;
+    }
+    if (!passwordCriteria.uppercase.test(password)) {
+      setError('Password must contain at least one uppercase letter.');
+      return;
+    }
+    if (!passwordCriteria.digit.test(password)) {
+      setError('Password must contain at least one digit.');
+      return;
+    }
+    if (!passwordCriteria.specialChar.test(password)) {
+      setError('Password must contain at least one special character.');
       return;
     }
 
     setError('');
 
-    console.log('Form values:', { name, email, password });
-
-    dispatch(register({ name, email, password }));
-
-    form.reset();
+    try {
+      await dispatch(register({ name, email, password }));
+      form.reset();
+    } catch (err) {
+      console.error('Error response from server:', err);
+      setError('Failed to register. Please try again.');
+    }
   };
 
   return (

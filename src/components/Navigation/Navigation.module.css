@@ -1,3 +1,8 @@
+.navigationContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
 .link {
   display: inline-block;
   text-decoration: none;
