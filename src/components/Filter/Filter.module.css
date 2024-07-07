@@ -1,29 +1,20 @@
-.filterContainer{
+.filterContainer {
   width: 200px;
   display: flex;
   justify-content: center;
 }
-.filterContainer h2 {
-    margin: 30px 0px 10px 0px;
-    display: flex;
-    justify-content: center;
-  }
-  .filterContainer h4 {
-    margin: 0px 0px 20px 0px;
-    display: flex;
-    justify-content: center;
-  }
-  .filterContainer input{
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    background: #eff7ef;
-    border-radius: 4px;
-    box-sizing: border-box;
-    box-shadow: 0 0 0 30px #eff7ef inset;
-  }
-  .filterContainer input:hover, .filterContainer input:hover{
-    border-color: #347a3f;
+.filterContainer input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: none;
+  background: #eff7ef;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 30px #eff7ef inset;
+}
+.filterContainer input:hover,
+.filterContainer input:focus {
+  border: 1px solid #347a3f;
   outline: none;
-  }
+}

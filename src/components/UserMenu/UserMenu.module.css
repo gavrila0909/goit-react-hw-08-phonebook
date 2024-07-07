@@ -1,27 +1,27 @@
 .wrapper {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .username {
-    font-weight: 700;
-    font-size: 22px;
-    color: #000000;
-  }
-  .wrapper button {
-    font-size: 18px;
-    color: black;
-    background: transparent;
-    border: 1px solid black;
-    border-radius: 8px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .wrapper button:hover {
-    color: white;
-    border: none;
-    background-color:#057018 ;
-    transform: scale(1.05);
-  }
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.username {
+  font-weight: 700;
+  font-size: 22px;
+  color: #000000;
+}
+.wrapper button {
+  font-size: 18px;
+  color: black;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.wrapper button:hover {
+  color: white;
+  border: none;
+  background-color: #057018;
+  transform: scale(1.05);
+}

@@ -1,3 +1,7 @@
+.authNavContainer {
+  display: flex;
+  flex-direction: column;
+}
 .link {
   display: inline-block;
   text-decoration: none;
@@ -9,6 +13,13 @@
 
 .link:hover {
   color: #057018;
-  transform: scale(1.05); 
+  transform: scale(1.05);
   transition: transform 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .authNavContainer {
+    display: flex;
+    flex-direction: row;
+  }
 }

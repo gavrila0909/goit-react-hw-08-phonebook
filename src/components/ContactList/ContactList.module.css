@@ -2,8 +2,6 @@
   width: 100%;
   max-width: 600px;
   overflow: auto;
-  padding: 20px;
-
 }
 
 .listDiv {
@@ -24,7 +22,7 @@
 }
 
 button {
-  background-color: #057018;
+  background-color: #1a5e26;
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -34,15 +32,15 @@ button {
 }
 
 button:hover {
-  background-color: #1a5e26;
+  background-color: #057018;
 }
 
 .contactName {
-  flex: 1; /* Face numele să ocupe spațiu maxim disponibil */
+  flex: 1;
 }
 
 .contactNumber {
-  width: 120px; /* Lățime fixă pentru numărul de telefon */
-  text-align: right; /* Aliniere la dreapta pentru numărul de telefon */
-  padding-left: 20px; /* Adaugă un spațiu între nume și număr */
+  width: 120px;
+  text-align: right;
+  padding-left: 20px;
 }

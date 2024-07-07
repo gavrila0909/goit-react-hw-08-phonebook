@@ -8,17 +8,16 @@ import Filter from '../components/Filter/Filter';
 import styles from './Contacts.module.css';
 
 const Contacts = () => {
-  console.log('Fetching contacts...'); 
+  console.log('Fetching contacts...');
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contacts.contacts);
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
 
   useEffect(() => {
-    console.log("Fetching contacts...");
+    console.log('Fetching contacts...');
     dispatch(fetchContacts());
   }, [dispatch]);
-  
 
   return (
     <div className={styles.mainContainer}>
@@ -38,7 +37,6 @@ const Contacts = () => {
         </>
       )}
     </div>
-
   );
 };
 

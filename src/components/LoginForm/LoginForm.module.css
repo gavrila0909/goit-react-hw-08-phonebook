@@ -1,6 +1,12 @@
+.loginFormCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 60px;
+}
 .form {
-  margin: 90px 70px;
-  width: 300px;
+  width: 80%;
+  max-width: 300px;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -21,7 +27,7 @@
   background: #eff7ef;
   border-radius: 4px;
   box-sizing: border-box;
-  box-shadow: 0 0 0 30px #eff7ef inset ;
+  box-shadow: 0 0 0 30px #eff7ef inset;
 }
 .form input:focus,
 .form input:hover {
@@ -63,4 +69,15 @@
   padding: 10px;
   margin-top: 10px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .loginFormCont {
+    justify-content: flex-start;
+    margin-top: 0px;
+  }
+  .form {
+    margin: 90px 70px;
+    width: 300px;
+  }
 }

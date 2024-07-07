@@ -1,7 +1,36 @@
-.header {
+.navigation,
+.userMenu,
+.authNav {
+  display: none;
+}
+
+.navMenuButton {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  cursor: pointer;
+}
+.navMenuButton svg {
+  fill: black;
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
     border-bottom: 1px solid #2a363b;
   }
+  .navMenuButton {
+    display: none;
+  }
+  .navigation,
+  .userMenu,
+  .authNav {
+    display: block;
+  }
+}

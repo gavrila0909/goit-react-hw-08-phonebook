@@ -15,40 +15,34 @@ const RegisterForm = () => {
     const email = form.elements.email.value;
     const password = form.elements.password.value;
 
-    // Validare pentru câmpurile obligatorii
     if (!name || !email || !password) {
       setError('All fields are required.');
       return;
     }
 
-    // Validare pentru formatul corect al email-ului
     const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!isValidEmail) {
       setError('The email is not valid.');
       return;
     }
 
-    // Validare pentru lungimea minimă a parolei
     const isValidPassword = password.length >= 6;
     if (!isValidPassword) {
       setError('Password must be at least 6 characters long.');
       return;
     }
 
-    // Resetarea mesajului de eroare dacă nu există probleme
     setError('');
 
     console.log('Form values:', { name, email, password });
 
-    // Dispatch pentru înregistrarea utilizatorului
     dispatch(register({ name, email, password }));
 
-    // Resetarea formularului după trimitere
     form.reset();
   };
 
   return (
-    <>
+    <div className={css.registerFormCont}>
       <form className={css.form} onSubmit={handleSubmit}>
         <label className={css.label}>
           Username
@@ -76,7 +70,7 @@ const RegisterForm = () => {
           </Link>
         </p>
       </form>
-    </>
+    </div>
   );
 };
 

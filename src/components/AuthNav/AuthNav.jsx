@@ -3,14 +3,14 @@ import css from './AuthNav.module.css';
 
 const AuthNav = () => {
   return (
-    <div>
+    <nav className={css.authNavContainer}>
       <NavLink className={css.link} to="/register">
         Register
       </NavLink>
       <NavLink className={css.link} to="/login">
         Log In
       </NavLink>
-    </div>
+    </nav>
   );
 };
 

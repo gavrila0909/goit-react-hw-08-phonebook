@@ -29,35 +29,37 @@ const LoginForm = () => {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit}>
-      <label>
-        Email
-        <input
-          type="email"
-          name="email"
-          required
-          autoComplete="email"
-          autoFocus
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          name="password"
-          autoComplete="current-password"
-          required
-        />
-      </label>
-      <button type="submit">Log In</button>
-      {error && <p className={css.error}>{error}</p>}
-      <p className={css.registerLink}>
-        Don't have an account?{' '}
-        <Link to="/register" className={css.register}>
-          Register
-        </Link>
-      </p>
-    </form>
+    <div className={css.loginFormCont}>
+      <form className={css.form} onSubmit={handleSubmit}>
+        <label>
+          Email
+          <input
+            type="email"
+            name="email"
+            required
+            autoComplete="email"
+            autoFocus
+          />
+        </label>
+        <label>
+          Password
+          <input
+            type="password"
+            name="password"
+            autoComplete="current-password"
+            required
+          />
+        </label>
+        <button type="submit">Log In</button>
+        {error && <p className={css.error}>{error}</p>}
+        <p className={css.registerLink}>
+          Don't have an account?{' '}
+          <Link to="/register" className={css.register}>
+            Register
+          </Link>
+        </p>
+      </form>
+    </div>
   );
 };
 

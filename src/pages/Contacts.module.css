@@ -1,14 +1,25 @@
 .mainContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 60px auto;
   justify-content: space-around;
-  gap: 30px;
+  gap: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: rgba(239, 247, 239, 0.5);
+  width: 100%;
+  align-items: center;
+  position: relative;
 }
 .title {
   position: absolute;
-  margin: 0 auto;
+  top: 0; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
   color: #2f5e2f;
+  width: 80%;
+  text-align: center;
+  font-size: 28px;
 }
 .contactsListContainer {
   display: flex;
@@ -16,9 +27,20 @@
   align-items: center;
   width: 60vw;
   height: 70vh;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: rgba(239, 247, 239, 0.5);
   gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .mainContainer {
+    flex-direction: row;
+  }
+  .contactsListContainer {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(239, 247, 239, 0.5);
+    padding-top: 25px;
+    width: 100%;
+  }
+  .title {
+    font-size: 1.5rem;
+    width: 90%;
+  }
 }

@@ -19,14 +19,14 @@ const ContactList = () => {
 
   return (
     <div className={styles.listContainer}>
-      <ol className={styles.listDiv}>
+      <ul className={styles.listDiv}>
         {filteredContacts.map(contact => (
           <li key={contact.id}>
             <span>{contact.name}</span> <span>{contact.number}</span>
             <button onClick={() => handleDelete(contact.id)}>Delete</button>
           </li>
         ))}
-      </ol>
+      </ul>
     </div>
   );
 };

@@ -6,7 +6,9 @@ const Home = () => {
     <div className={css.container}>
       <h1 className={css.title}>Welcome to Contact Manager!</h1>
       <p className={css.description}>
-        Contact Manager is a simple and efficient app for organizing your contact information. Log in to start adding, viewing, and deleting your contacts.
+        Contact Manager is a simple and efficient app for organizing your
+        contact information. Log in to start adding, viewing, and deleting your
+        contacts.
       </p>
       <p className={css.features}>
         <strong>Main Features:</strong>
