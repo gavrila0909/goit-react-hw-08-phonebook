@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 600px;
   overflow: auto;
+  padding: 0 10px; 
 }
 
 .listDiv {
@@ -10,9 +11,9 @@
 }
 
 .listDiv li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
   padding: 8px 0;
   border-bottom: 1px solid #ccc;
 }
@@ -37,15 +38,17 @@ button:hover {
 
 .contactName {
   flex: 1;
+  margin-right: 10px; 
 }
 
 .contactNumber {
-  width: 120px;
+  flex: 0 0 120px;
   text-align: right;
-  padding-left: 20px;
+  padding-left: 10px; 
 }
+
 @media screen and (min-width: 768px) {
-  .listDiv {
-    padding: 0px 20px;
+  .listDiv li {
+    padding: 8px 20px; 
   }
 }

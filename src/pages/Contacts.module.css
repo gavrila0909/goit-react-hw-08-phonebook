@@ -34,6 +34,7 @@
 @media screen and (min-width: 768px) {
   .mainContainer {
     flex-direction: row;
+    margin: 50px auto;
   }
   .contactsListContainer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

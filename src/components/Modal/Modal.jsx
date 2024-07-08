@@ -23,7 +23,7 @@ const Modal = () => {
     <div className={css.modal}>
       <div className={css.modalContent}>
         <button className={css.closeButton} onClick={handleClose}>
-          X
+        ✖
         </button>
         <Navigation />
         {isLoggedIn || <AuthNav />}
