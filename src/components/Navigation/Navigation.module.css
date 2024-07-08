@@ -1,19 +1,30 @@
 .navigationContainer {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 .link {
   display: inline-block;
   text-decoration: none;
-  padding: 12px;
   font-weight: 700;
   font-size: 22px;
   color: #000000;
+  padding: 12px;
 }
 
 .link:hover {
   color: #057018;
   transform: scale(1.05);
   transition: transform 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .navigationContainer {
+    flex-direction: row;
+    margin-top: 0px;
+    gap: 20px;
+  }
+  .link {
+    padding: 0px;
+  }
 }

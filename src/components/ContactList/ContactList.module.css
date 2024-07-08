@@ -44,3 +44,8 @@ button:hover {
   text-align: right;
   padding-left: 20px;
 }
+@media screen and (min-width: 768px) {
+  .listDiv {
+    padding: 0px 20px;
+  }
+}

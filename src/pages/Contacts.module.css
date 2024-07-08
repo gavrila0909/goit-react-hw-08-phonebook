@@ -9,6 +9,8 @@
   width: 100%;
   align-items: center;
   position: relative;
+  box-sizing: border-box;
+  width: 95%;
 }
 .title {
   position: absolute;
