@@ -42,6 +42,16 @@ const contactsSlice = createSlice({
         contact => contact.id !== action.payload
       );
     },
+    updateContact(state, action) {
+      const { id, name, number } = action.payload;
+      const existingContact = state.contacts.find(contact => contact.id === id);
+      if (existingContact) {
+        existingContact.name = name;
+        existingContact.number = number;
+      } else {
+        Notiflix.Notify.failure('Contact not found');
+      }
+    },
   },
   extraReducers: builder => {
     builder
@@ -60,5 +70,5 @@ const contactsSlice = createSlice({
   },
 });
 
-export const { addContact, deleteContact } = contactsSlice.actions;
+export const { addContact, deleteContact, updateContact } = contactsSlice.actions;
 export const contactsReducer = contactsSlice.reducer;
