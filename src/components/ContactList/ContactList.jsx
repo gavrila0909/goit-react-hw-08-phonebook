@@ -20,15 +20,27 @@ const ContactList = () => {
   );
 
   return (
-    <div className={styles.listContainer}>
-      <ul className={styles.listDiv}>
-        {filteredContacts.map(contact => (
-          <li key={contact.id}>
-            <span>{contact.name}</span> <span>{contact.number}</span>
-            <button onClick={() => handleDelete(contact.id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+    <div className={styles.tableContainer}>
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <th>Nume/Prenume</th>
+            <th>Număr de telefon</th>
+            <th>Acțiuni</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredContacts.map(contact => (
+            <tr key={contact.id}>
+              <td>{contact.name}</td>
+              <td>{contact.number}</td>
+              <td>
+                <button onClick={() => handleDelete(contact.id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

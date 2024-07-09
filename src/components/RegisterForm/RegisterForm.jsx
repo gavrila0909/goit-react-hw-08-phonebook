@@ -64,24 +64,27 @@ const RegisterForm = () => {
   return (
     <div className={css.registerFormCont}>
       <form className={css.form} onSubmit={handleSubmit}>
-        <label className={css.label}>
-          Username
-          <input type="text" name="name" required autoComplete="name" id="username" autoFocus />
-        </label>
-        <label className={css.label}>
-          Email
-          <input type="email" name="email" required autoComplete="email" id="email" />
-        </label>
-        <label className={css.label}>
-          Password
-          <input
-            type="password"
-            name="password"
-            required
-            autoComplete="current-password"
-            id="password"
-          />
-        </label>
+      <label className={css.label} htmlFor="username">
+  Username
+</label>
+<input type="text" id="username" name="name" required autoComplete="name" />
+
+<label className={css.label} htmlFor="email">
+  Email
+</label>
+<input type="email" id="email" name="email" required autoComplete="email" />
+
+<label className={css.label} htmlFor="password">
+  Password
+</label>
+<input
+  type="password"
+  id="password"
+  name="password"
+  required
+  autoComplete="current-password"
+/>
+
         <button type="submit">Register</button>
         {error && <p className={css.error}>{error}</p>}
         <p className={css.registerLink}>

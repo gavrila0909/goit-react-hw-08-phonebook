@@ -2,6 +2,7 @@
   width: 200px;
   display: flex;
   justify-content: center;
+  margin: 0px auto;
 }
 input[type='text'] {
   font-size: 16px;
@@ -11,19 +12,27 @@ input[type='text'] {
   width: 100%;
   font-size: 16px;
   padding: 8px;
-  margin-bottom: 15px;
   border: 1px solid transparent;
   background: #dff7df;
   border-radius: 4px;
   box-sizing: border-box;
   box-shadow: 0 0 0 30px #eff7ef inset;
 }
-.filterContainer input ::placeholder{
-  font-size: 14px;
+.filterContainer input::placeholder{
+  font-size: 12px;
 }
 
 .filterContainer input:hover,
 .filterContainer input:focus {
   border: 1px solid #347a3f;
   outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .filterContainer {
+    margin-top: 20px;
+  }
+  .filterContainer input::placeholder{
+    font-size: 16px;
+  }
 }
