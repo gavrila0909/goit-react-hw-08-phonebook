@@ -10,7 +10,7 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-  // <React.StrictMode>
+ <React.StrictMode>
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <BrowserRouter basename="goit-react-hw-08-phonebook">
@@ -18,5 +18,5 @@ root.render(
       </BrowserRouter>
     </PersistGate>
   </Provider>
-  // </React.StrictMode>
+ </React.StrictMode>
 );

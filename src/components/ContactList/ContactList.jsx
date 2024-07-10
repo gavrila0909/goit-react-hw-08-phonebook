@@ -72,9 +72,9 @@ const ContactList = () => {
         <table className={styles.table}>
           <thead>
             <tr>
-              <th>Nume/Prenume</th>
-              <th>Număr de telefon</th>
-              <th>Acțiuni</th>
+              <th>Name</th>
+              <th>Phone number</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>

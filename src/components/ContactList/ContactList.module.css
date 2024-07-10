@@ -3,7 +3,8 @@
   max-width: 600px;
   overflow: auto;
   padding: 0 10px;
-  margin: 0 auto; /* Centrăm tabelul */
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .table {
@@ -11,34 +12,38 @@
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #ccc;
   padding: 8px;
-  text-align: center; /* Aliniere pe centru */
+  text-align: center;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #bacab8;
 }
 
 button {
-  background-color: #1a5e26;
+  background-color: #3c693e;
   color: #fff;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
 
 button:hover {
-  background-color: #057018;
+  background-color: #38553a;
 }
 
-input[type="text"] {
+input[type='text'] {
   width: 100%;
-  padding: 8px;
+  padding: 6%;
   box-sizing: border-box;
+  height: 26px;
 }
 
 @media screen and (min-width: 768px) {
@@ -47,4 +52,5 @@ input[type="text"] {
     padding: 0 20px;
     box-sizing: border-box;
   }
+ 
 }
